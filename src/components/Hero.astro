@@ -1,0 +1,42 @@
+<section class="hero d-flex align-center">
+    <div class="container d-flex-lg align-center justify-between">
+        <div class="hero__title">
+            <span>Eat Pizza Everyday</span>
+            <h1>SHARE YOUR LOVE FOR PIZZA</h1>
+            <button class="btn btn-primary rounded d-flex align-center">
+                <i class="fa fa-cart"></i>
+                <span class="text-lg">Order Online</span>
+            </button>
+        </div>
+        <div class="hero__pizza p-relative">
+            <img
+                src="https://p.w3layouts.com/demos_new/template_demo/30-03-2020/pizzapan-liberty-demo_Free/1781439321/web/assets/images/pizza-full.png"
+                alt="pizza"
+            />
+            <div
+                class="price rounded bg-white d-flex justify-center align-center flex-column text-xl p-absolute"
+            >
+                <span class="d-block">Only</span>
+                <span class="d-block bold">$14.95</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style lang="scss">
+    .hero {
+        min-height: calc(100vh - 90px);
+        &__pizza {
+            img {
+                margin-top: 3rem;
+            }
+            .price {
+                border-radius: 50%;
+                width: 7rem;
+                height: 7rem;
+                color: var(--black);
+                top: 3rem;
+            }
+        }
+    }
+</style>

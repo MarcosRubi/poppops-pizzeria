@@ -69,6 +69,9 @@ const { title } = Astro.props;
 	ul li {
 		list-style-type: inherit;
 	}
+	img{
+		max-width: 100%;
+	}
 
 	code,
 	pre,
@@ -189,6 +192,12 @@ const { title } = Astro.props;
 	.d-flex {
 		display: flex;
 	}
+	.d-block{
+		display: block;
+	}
+	.flex-column{
+		flex-direction: column;
+	}
 	.align-center {
 		align-items: center;
 	}
@@ -196,10 +205,14 @@ const { title } = Astro.props;
 	.justify-between {
 		justify-content: space-between;
 	}
+	.justify-center{
+		justify-content: center;
+	}
 	.btn {
 		padding: 1rem 2rem;
 		max-width: 15rem;
-		margin: 0 auto;
+		border:none;
+		outline: none;
 	}
 	.btn-primary {
 		background-color: var(--white);
@@ -228,12 +241,38 @@ const { title } = Astro.props;
 		background-color: var(--black);
 	}
 
+	.text-lg{
+		font-size: 1.25rem;
+	}
+	.text-xl{
+		font-size: 2rem;
+	}
+	.bold{
+		font-weight: 600;
+	}
+
+	.bg-white{
+		background-color: var(--white);
+	}
+	.p-absolute{
+		position: absolute;
+	}	
+	.p-relative{
+		position: relative;
+	}
+
 	@media (min-width:768px) {
 		.w-screen-sm{
 			width: auto;
 		}
 		header{
 			border-bottom: 1px solid var(--white);
+		}
+	}
+
+	@media (min-width:1024px){
+		.d-flex-lg{
+			display: flex;
 		}
 	}
 </style>
