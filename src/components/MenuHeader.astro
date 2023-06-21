@@ -26,28 +26,12 @@
 		</div>
 	</div>
 </header>
-<style>
+<style lang="scss">
 	header {
 		z-index: 999;
-	}
-
-	header .container > div{
-		padding: 0.5rem 0;
-	}
-	nav li {
-		list-style: none;
-	}
-
-	.line {
-		display: block;
-		border: 2px solid var(--white);
-		margin: 0.25rem 0;
-		width: 24px;
-		transition: all 0.3s ease-in-out;
-	}
-
-	.menu-hamburguer {
-		cursor: pointer;
+		.container > div {
+			padding: 0.5rem 0;
+		}
 	}
 
 	.menu {
@@ -55,58 +39,72 @@
 		top: -260px;
 		z-index: -1;
 		transition: all 0.5s ease-in-out;
+		ul {
+			padding: 1rem 0;
+			margin: 0;
+		}
+		li {
+			display: block;
+			list-style: none;
+		}
+		a {
+			text-decoration: none;
+			padding: 1rem 1.5rem;
+			display: block;
+			text-align: center;
+			color: var(--white);
+			font-size: 1.5rem;
+			font-weight: 600;
+			&.btn{
+				color: var(--black);
+			}
+		}
+		&.show {
+			top: 80px;
+		}
 	}
 
-	.menu ul {
-		padding: 1rem 0;
-		margin: 0;
-	}
-
-	.menu li {
-		display: block;
-	}
-
-	nav a {
-		text-decoration: none;
-		padding: 1rem;
-		display: block;
-		text-align: center;
-		color: var(--white);
-		font-size: 1.5rem;
-		font-weight: 600;
-	}
-
-	nav.menu.show {
-		top: 80px;
+	.menu-hamburguer {
+		cursor: pointer;
+		.line {
+			display: block;
+			border: 2px solid var(--white);
+			margin: 0.25rem 0;
+			width: 24px;
+			transition: all 0.3s ease-in-out;
+		}
+		&.close {
+			.line:first-child {
+				transform: rotate(45deg) translate(6px, 10px);
+			}
+			.line:nth-child(2) {
+				opacity: 0;
+			}
+			.line:last-child {
+				transform: rotate(-45deg) translate(2px, -5px);
+			}
+		}
 	}
 
 	.absolute-sm {
 		position: absolute;
 	}
 
-	.menu-hamburguer.close .line:nth-child(2) {
-		opacity: 0;
-	}
-
-	.menu-hamburguer.close .line:first-child {
-		transform: rotate(45deg) translate(6px, 10px);
-	}
-
-	.menu-hamburguer.close .line:last-child {
-		transform: rotate(-45deg) translate(2px, -5px);
-	}
-
-	.logo {
+	.logo img {
 		max-width: 7rem;
 	}
 
-	.logo img {
-		max-width: 100%;
-	}
-
 	@media (min-width: 768px) {
-		nav a {
-			font-size: 1rem;
+		.menu {
+			a {
+				font-size: 1rem;
+				padding: 1rem;
+			}
+			&,
+			&.show {
+				border-bottom: none;
+				z-index: 999;
+			}
 		}
 
 		.d-flex-md {
@@ -115,12 +113,6 @@
 
 		.absolute-sm {
 			position: initial;
-		}
-
-		nav.menu,
-		nav.menu.show {
-			border-bottom: none;
-			z-index: 999;
 		}
 
 		.menu-hamburguer {
