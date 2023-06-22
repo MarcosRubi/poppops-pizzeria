@@ -1,0 +1,108 @@
+<section class="services">
+    <div class="container d-flex flex-column-sm align-center-md">
+        <div class="services__header">
+            <h2>Our Services</h2>
+            <p>
+                We offer a diverse array of dining services tailored to suit
+                your preferencies. Our commitment is to deliver each service
+                with a warm smile, ensuring your utmost satisfaction
+            </p>
+            <a href="#" class="btn btn-primary--black rounded"
+                >Discover More About Our Services</a
+            >
+        </div>
+        <div class="services__list d-flex-lg justify-between">
+            <div>
+                <img
+                    src="/icon-dining-table.svg"
+                    alt="Icon Takeout"
+                    class="d-flex"
+                />
+                <h3>Dine In</h3>
+                <p>
+                    Enjoy a pleasant dining experience in out welcoming
+                    atmosphere
+                </p>
+            </div>
+            <div>
+                <img
+                    src="/icon-take-away.svg"
+                    alt="Icon Takeout"
+                    class="d-flex"
+                />
+                <h3>Takeout</h3>
+                <p>Order conveniently by phone or online for delivery</p>
+            </div>
+            <div>
+                <img
+                    src="/icon-buffet.svg"
+                    alt="Icon Catering"
+                    class="d-flex"
+                />
+                <h3>Catering</h3>
+                <p>Let us cater your special event. Contact us for options</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style lang="scss">
+    .services {
+        & > div {
+            gap: 2rem;
+            justify-content: space-between;
+        }
+        p {
+            color: var(--gray);
+            margin: 1rem 0 2rem 0;
+            max-width: 20rem;
+        }
+
+        &__list {
+            margin-top: 3rem;
+            flex-wrap: wrap;
+            & > div {
+                margin-bottom: 3rem;
+            }
+            img {
+                background-color: rgba(38, 50, 56, 0.1);
+                border-radius: 100%;
+                padding: 0.5rem;
+                max-width: 4rem;
+            }
+            h3 {
+                margin: 1rem 0 0 0;
+            }
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        .services {
+            &__list {
+                margin-bottom: 0;
+                flex-basis: 40%;
+            }
+            &__header {
+                flex-grow: 1;
+                p{
+                    max-width: 25rem;
+                }
+            }
+            &__header {
+                flex-basis: 40%;
+            }
+        }
+    }
+    @media (min-width:1200px) {
+        .services{
+            &__list{
+                flex-grow: 1;
+                flex-wrap: nowrap;
+                gap: 0 4rem;
+            }
+        }
+    }
+</style>
