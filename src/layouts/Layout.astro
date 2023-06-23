@@ -4,6 +4,7 @@ export interface Props {
 }
 
 const { title } = Astro.props;
+
 ---
 
 <!DOCTYPE html>
@@ -17,13 +18,9 @@ const { title } = Astro.props;
 		<title>{title}</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;600;900&display=swap"
-			rel="stylesheet"
-		/>
-		<script
-			src="https://kit.fontawesome.com/87b8bff04b.js"
-			crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;600;900&display=swap" rel="stylesheet"/>
+		<script src="https://kit.fontawesome.com/87b8bff04b.js" crossorigin="anonymous"></script>
+		
 	</head>
 	<body class="relative">
 		<slot />
@@ -34,6 +31,7 @@ const { title } = Astro.props;
 		--black: #212121;
 		--white: #fff;
 		--gray: #757575;
+		--bg-gray: rgba(38, 50, 56, 0.1);
 	}
 	*,
 	*::before,
