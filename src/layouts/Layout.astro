@@ -4,7 +4,6 @@ export interface Props {
 }
 
 const { title } = Astro.props;
-
 ---
 
 <!DOCTYPE html>
@@ -18,13 +17,56 @@ const { title } = Astro.props;
 		<title>{title}</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;600;900&display=swap" rel="stylesheet"/>
-		<script src="https://kit.fontawesome.com/87b8bff04b.js" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="./css/lightbox.css"> 
+		<link
+			href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;600;900&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/87b8bff04b.js"
+			crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="./css/lightbox.css" />
+		<link rel="stylesheet" href="./css/owl.carousel.min.css" />
+		<link rel="stylesheet" href="./css/owl.theme.default.min.css" />
 	</head>
 	<body class="relative">
 		<slot />
 		<script src="/js/lightbox-plus-jquery.min.js" is:inline></script>
+		<script
+			src="https://code.jquery.com/jquery-3.7.0.min.js"
+			integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+			crossorigin="anonymous"></script>
+		<script src="/js/owl.carousel.min.js" is:inline></script>
+		<script>
+			$(document).ready(function () {
+				$(".owl-carousel").owlCarousel({
+					margin: 10,
+					responsiveClass: true,
+					lazyLoad: true,
+					responsive: {
+						0: {
+							items: 1,
+							nav: false,
+							loop: true,
+						},
+						600: {
+							items: 2,
+							nav: false,
+							loop: true,
+						},
+						1000: {
+							items: 3,
+							nav: true,
+							loop: true,
+						},
+						1200: {
+							items: 4,
+							nav: true,
+							loop: true,
+						},
+					},
+				});
+			});
+		</script>
 	</body>
 </html>
 <style is:global lang="scss">
@@ -186,10 +228,10 @@ const { title } = Astro.props;
 		font-size: 2.5rem;
 	}
 	h2 {
-		font-size: 2.5rem;
+		font-size: 2rem;
 		margin: 0;
 	}
-	h3{
+	h3 {
 		font-size: 1.5rem;
 	}
 	section {
@@ -200,6 +242,10 @@ const { title } = Astro.props;
 		max-width: 1440px;
 		width: 90%;
 		margin: 0 auto;
+	}
+
+	.bg-gray {
+		background-color: var(--bg-gray);
 	}
 
 	.d-flex {
@@ -255,10 +301,13 @@ const { title } = Astro.props;
 	.rounded {
 		border-radius: 2rem;
 	}
-	.shadow-sm{
+	.rounded-sm {
+		border-radius: 0.5rem;
+	}
+	.shadow-sm {
 		box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 	}
-	.text-center{
+	.text-center {
 		text-align: center;
 	}
 	.fixed {
@@ -318,7 +367,7 @@ const { title } = Astro.props;
 		h2 {
 			font-size: 3rem;
 		}
-		h3{
+		h3 {
 			font-size: 2rem;
 		}
 		.w-screen-sm {
