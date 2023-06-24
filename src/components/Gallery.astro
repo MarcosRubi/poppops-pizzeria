@@ -2,31 +2,67 @@
     <div class="container">
         <h2 class="text-center">Gallery</h2>
         <div class="gallery__images">
-            <div class="colum-left">
-                <img
-                    src="https://img.freepik.com/foto-gratis/sacerdote-sexo-masculino-joven-que-usa-smartphone_23-2149298310.jpg?t=st=1687556426~exp=1687557026~hmac=6795f79e52431c350428cd17e2b1b2dea6889cb22f11f8449a4da4247573426b"
-                    alt=""
-                    class="rounded shadow-sm"
-                />
+            <div>
+                <a
+                    href="https://img.freepik.com/foto-gratis/sacerdote-sexo-masculino-joven-que-usa-smartphone_23-2149298310.jpg?t=st=1687556426~exp=1687557026~hmac=6795f79e52431c350428cd17e2b1b2dea6889cb22f11f8449a4da4247573426b"
+                    data-lightbox="models"
+                    data-title="Test imagen"
+                >
+                    <img
+                        src="https://img.freepik.com/foto-gratis/sacerdote-sexo-masculino-joven-que-usa-smartphone_23-2149298310.jpg?t=st=1687556426~exp=1687557026~hmac=6795f79e52431c350428cd17e2b1b2dea6889cb22f11f8449a4da4247573426b"
+                        alt=""
+                        class="rounded shadow-sm"
+                    />
+                </a>
             </div>
-            <div class="column-center">
-                <img
-                    src="https://img.freepik.com/foto-gratis/sacerdote-sexo-masculino-joven-que-usa-smartphone_23-2149298310.jpg?t=st=1687556426~exp=1687557026~hmac=6795f79e52431c350428cd17e2b1b2dea6889cb22f11f8449a4da4247573426b"
-                    alt=""
-                    class="rounded shadow-sm"
-                />
-                <img src="/images/1.jpg" alt="" class="rounded shadow-sm" />
+            <div>
+                <a
+                    href="https://img.freepik.com/foto-gratis/sacerdote-sexo-masculino-joven-que-usa-smartphone_23-2149298310.jpg?t=st=1687556426~exp=1687557026~hmac=6795f79e52431c350428cd17e2b1b2dea6889cb22f11f8449a4da4247573426b"
+                    data-lightbox="models"
+                    data-title="Test imagen"
+                >
+                    <img
+                        src="https://img.freepik.com/foto-gratis/sacerdote-sexo-masculino-joven-que-usa-smartphone_23-2149298310.jpg?t=st=1687556426~exp=1687557026~hmac=6795f79e52431c350428cd17e2b1b2dea6889cb22f11f8449a4da4247573426b"
+                        alt=""
+                        class="rounded shadow-sm"
+                    />
+                </a>
+                <a
+                    href="/images/1.jpg"
+                    data-lightbox="models"
+                    data-title="Test imagen"
+                >
+                    <img src="/images/1.jpg" alt="" class="rounded shadow-sm" />
+                </a>
             </div>
-            <div class="column-center">
-                <img src="/images/1.jpg" alt="" class="rounded shadow-sm" />
-                <img
-                    src="https://img.freepik.com/foto-gratis/sacerdote-sexo-masculino-joven-que-usa-smartphone_23-2149298310.jpg?t=st=1687556426~exp=1687557026~hmac=6795f79e52431c350428cd17e2b1b2dea6889cb22f11f8449a4da4247573426b"
-                    alt=""
-                    class="rounded shadow-sm"
-                />
+            <div>
+                <a
+                    href="/images/1.jpg"
+                    data-lightbox="models"
+                    data-title="Test imagen"
+                >
+                    <img src="/images/1.jpg" alt="" class="rounded shadow-sm" />
+                </a>
+                <a
+                    href="https://img.freepik.com/foto-gratis/sacerdote-sexo-masculino-joven-que-usa-smartphone_23-2149298310.jpg?t=st=1687556426~exp=1687557026~hmac=6795f79e52431c350428cd17e2b1b2dea6889cb22f11f8449a4da4247573426b"
+                    data-lightbox="models"
+                    data-title="Test imagen"
+                >
+                    <img
+                        src="https://img.freepik.com/foto-gratis/sacerdote-sexo-masculino-joven-que-usa-smartphone_23-2149298310.jpg?t=st=1687556426~exp=1687557026~hmac=6795f79e52431c350428cd17e2b1b2dea6889cb22f11f8449a4da4247573426b"
+                        alt=""
+                        class="rounded shadow-sm"
+                    />
+                </a>
             </div>
-            <div class="column-right">
-                <img src="/images/6.jpg" alt="" class="rounded shadow-sm" />
+            <div>
+                <a
+                    href="/images/6.jpg"
+                    data-lightbox="models"
+                    data-title="Test imagen"
+                >
+                    <img src="/images/6.jpg" alt="" class="rounded shadow-sm" />
+                </a>
             </div>
         </div>
     </div>
@@ -52,10 +88,9 @@
         }
     }
 
-    @media (min-width:1024px) {
+    @media (min-width: 1024px) {
         .gallery {
             &__images {
-                margin-top: 2rem;
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
                 gap: 2rem;
