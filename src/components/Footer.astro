@@ -1,0 +1,110 @@
+<footer>
+    <div class="container">
+        <div class="address">
+            <h3>Address</h3>
+            <p>719 Hawkins Ave Ronkonkoma NY 11779</p>
+            <a href="mailto:poppopspizzeria@yahoo.com">poppopspizzeria@yahoo.com</a>
+        </div>
+        <div class="book-a-table">
+            <h3>Book a table</h3>
+            <p>Reserve a table in advance to secure your spot at our restaurant.</p>
+            <a href="tel:+16316483600">+1 (631) 648-3600</a>
+        </div>
+        <div class="opening-hours">
+            <h3>Opening hours</h3>
+            <p>Monday - Friday</p>
+            <p>09:00 am to 11:00 pm</p>
+        </div>
+        <div class="social-feed">
+            <h3>Social Feed</h3>
+            <div class="d-flex align-center">
+                <a href="http://google.com" target="_blank" rel="noopener noreferrer" >
+                    <i class="fa fa-facebook-f"></i>
+                </a>
+                <a href="http://google.com" target="_blank" rel="noopener noreferrer" >
+                    <i class="fa fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="copy text-center-sm">
+            <p> &copy; Poppop's Pizzeria. All rights reserved | Designed by <a href="https://mrubi.vercel.app/" target="_blank">Marcos Rubí</a> </p>
+        </div>
+    </div>
+</footer>
+
+
+<style lang="scss">
+    footer{
+        background-color: var(--black);
+        color: var(--white);
+        padding-top: 3rem;
+        & > div{
+            display: grid;
+            gap: 2rem;
+            grid-template-areas: 
+            "address address address address"
+            "book book book book"
+            "hours hours hours hours"
+            "social social social social"
+            "copy copy copy copy";
+        }
+        p{
+            margin: 1rem 0;
+            color: var(--gray);
+            max-width: 20rem;
+        }
+        .address{
+            grid-area: address;
+        }
+        .book-a-table{
+            grid-area: book;
+        }
+        .opening-hours{
+            grid-area: hours;
+        }
+        .social-feed{
+            grid-area: social;
+            a{
+                padding: 0 1rem;
+                font-size: 1.5rem;
+            }
+        }
+        .copy{
+            grid-area: copy;
+            border-top: 1px solid #2e2e2e;
+            p{
+                max-width: none;
+            }
+        }
+    }
+
+    @media (min-width:768px) {
+        footer{
+            & > div{
+                display: grid;
+                gap: 4rem;
+                grid-template-areas: 
+                "address address book book"
+                "hours hours social social"
+                "copy copy copy copy";
+            }
+        }
+    }
+    @media (min-width:1200px) {
+        footer{
+            & > div{
+                display: grid;
+                gap: 2rem;
+                grid-template-areas: 
+                "address book hours social"
+                "copy copy copy copy";
+                & > div{
+                    &:not(:nth-child(4), :nth-child(5)){
+                        border-right: 1px solid #2e2e2e;
+                        padding: 0 1rem 0 0;
+                    }
+                }
+            }
+        }
+    }
+</style>
