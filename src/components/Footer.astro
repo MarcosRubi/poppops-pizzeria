@@ -3,12 +3,12 @@
         <div class="address">
             <h3>Address</h3>
             <p>719 Hawkins Ave Ronkonkoma NY 11779</p>
-            <a href="mailto:poppopspizzeria@yahoo.com">poppopspizzeria@yahoo.com</a>
+            <a href="mailto:poppopspizzeria@yahoo.com"><span class="p-relative">poppopspizzeria@yahoo.com</span></a>
         </div>
         <div class="book-a-table">
             <h3>Book a table</h3>
             <p>Reserve a table in advance to secure your spot at our restaurant.</p>
-            <a href="tel:+16316483600">+1 (631) 648-3600</a>
+            <a href="tel:+16316483600"><span class="p-relative">+1 (631) 648-3600</span></a>
         </div>
         <div class="opening-hours">
             <h3>Opening hours</h3>
@@ -19,15 +19,15 @@
             <h3>Social Feed</h3>
             <div class="d-flex align-center">
                 <a href="http://google.com" target="_blank" rel="noopener noreferrer" >
-                    <i class="fa fa-facebook-f"></i>
+                    <span class="p-relative"><i class="fa fa-facebook-f"></i></span>
                 </a>
                 <a href="http://google.com" target="_blank" rel="noopener noreferrer" >
-                    <i class="fa fa-instagram"></i>
+                    <span class="p-relative"><i class="fa fa-instagram"></i></span>
                 </a>
             </div>
         </div>
         <div class="copy text-center-sm">
-            <p> &copy; Poppop's Pizzeria. All rights reserved | Designed by <a href="https://mrubi.vercel.app/" target="_blank">Marcos Rubí</a> </p>
+            <p> &copy; Poppop's Pizzeria. All rights reserved | Designed by <a href="https://mrubi.vercel.app/" target="_blank"><span class="p-relative">Marcos Rubí</span></a> </p>
         </div>
     </div>
 </footer>
@@ -67,6 +67,10 @@
             a{
                 padding: 0 1rem;
                 font-size: 1.5rem;
+                transition: transform .3s linear;
+                &:hover{
+                    transform: scale(1.15);
+                }
             }
         }
         .copy{

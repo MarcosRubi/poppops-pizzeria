@@ -9,11 +9,22 @@
 				id="menu"
 			>
 				<ul class="d-flex-md align-center">
-					<li><a href="#"> <span class="p-relative">Home</span></a></li>
-					<li><a href="#"> <span class="p-relative">About</span></a></li>
-					<li><a href="#"> <span class="p-relative">Menu</span></a></li>
-					<li><a href="#"> <span class="p-relative">Contact</span></a></li>
-					<li><a href="#"> <span class="p-relative">Our Services</span></a></li>
+					<li>
+						<a href="#"> <span class="p-relative">Home</span></a>
+					</li>
+					<li>
+						<a href="#"> <span class="p-relative">About</span></a>
+					</li>
+					<li>
+						<a href="#"> <span class="p-relative">Menu</span></a>
+					</li>
+					<li>
+						<a href="#"> <span class="p-relative">Contact</span></a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="p-relative">Our Services</span></a>
+					</li>
 					<li>
 						<a href="#" class="btn btn-primary rounded"
 							>Contact Us</a
@@ -37,9 +48,9 @@
 		}
 	}
 
-	.logo{
-		transition: all .3s ease-in-out;
-		&:hover{
+	.logo {
+		transition: all 0.3s ease-in-out;
+		&:hover {
 			transform: scale(1.05);
 		}
 	}
@@ -63,24 +74,8 @@
 				font-weight: 600;
 				margin: auto;
 				&:not(.btn) {
-					& span::after{
-						content: '';
-						position: absolute;
-						border: 2px solid var(--white);
-						bottom: 0rem;
-						left: 50%;
-						transform: translate(-50%, 50%);
-						width: 0%;
-						opacity: 0;
-						border-radius: 5rem;
-						transition: all .3s ease-in-out;
-					}
 					padding: 1rem 1.5rem;
 					color: var(--white);
-				}
-				&:hover span::after{
-					opacity: 1;
-					width: 100%;
 				}
 			}
 		}

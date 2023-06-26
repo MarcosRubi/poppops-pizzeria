@@ -227,6 +227,22 @@ const { title } = Astro.props;
 	a {
 		text-decoration: none;
 		color: var(--white);
+		& span::after {
+			content: "";
+			position: absolute;
+			border: 2px solid var(--white);
+			bottom: 0rem;
+			left: 50%;
+			transform: translate(-50%, 100%);
+			width: 0%;
+			opacity: 0;
+			border-radius: 5rem;
+			transition: all 0.3s ease-in-out;
+		}
+		&:hover span::after {
+			opacity: 1;
+			width: 100%;
+		}
 	}
 	h1 {
 		font-size: 2.5rem;
