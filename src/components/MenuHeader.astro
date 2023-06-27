@@ -50,9 +50,29 @@
 <style lang="scss">
 	header {
 		z-index: 999;
-		.container > div {
+		transition: all 0.3s;
+		&.sticky {
+			box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+				rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+			.container {
+				& > div {
+					padding: 0.1rem 0;
+				}
+			}
+			.menu {
+				top: -270px;
+				&.show{
+					top:70px;
+				}
+			}
+		}
+		.container{
+			opacity: 0;
+			& > div {
+			transition: all 0.3s;
 			padding: 0.5rem 0;
 		}
+		} 
 	}
 
 	.logo {
@@ -63,6 +83,7 @@
 	}
 
 	.menu {
+		transition: all 0.3s;
 		border-bottom: 1px solid var(--white);
 		top: -260px;
 		z-index: -1;
@@ -148,24 +169,3 @@
 		}
 	}
 </style>
-<script>
-	window.onload = () => {
-		const $menu = document.getElementById("menu");
-		const $menuHamburguer = document.getElementById("menu-hamburguer");
-		const $menuItemsMenu = document.querySelectorAll(".menu a");
-
-		$menuHamburguer.onclick = () => {
-			$menu.classList.toggle("show");
-			$menuHamburguer.classList.toggle("close");
-		};
-
-		$menuItemsMenu.forEach(($menuItem) => {
-			$menuItem.onclick = () => {
-				if (window.innerWidth < 768) {
-					$menu.classList.toggle("show");
-					$menuHamburguer.classList.toggle("close");
-				}
-			};
-		});
-	};
-</script>
