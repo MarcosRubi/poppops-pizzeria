@@ -13,17 +13,24 @@
 						<a href="#"> <span class="p-relative">Home</span></a>
 					</li>
 					<li>
-						<a href="#"> <span class="p-relative">About</span></a>
+						<a href="#our-services">
+							<span class="p-relative">Services</span></a
+						>
 					</li>
 					<li>
-						<a href="#"> <span class="p-relative">Menu</span></a>
+						<a href="#products">
+							<span class="p-relative">Menu</span></a
+						>
 					</li>
 					<li>
-						<a href="#"> <span class="p-relative">Contact</span></a>
+						<a href="#about-us">
+							<span class="p-relative">About Us</span></a
+						>
 					</li>
 					<li>
-						<a href="#">
-							<span class="p-relative">Our Services</span></a>
+						<a href="#contact">
+							<span class="p-relative">Contact</span></a
+						>
 					</li>
 					<li>
 						<a href="#" class="btn btn-primary rounded"
@@ -145,9 +152,20 @@
 	window.onload = () => {
 		const $menu = document.getElementById("menu");
 		const $menuHamburguer = document.getElementById("menu-hamburguer");
+		const $menuItemsMenu = document.querySelectorAll(".menu a");
+
 		$menuHamburguer.onclick = () => {
 			$menu.classList.toggle("show");
 			$menuHamburguer.classList.toggle("close");
 		};
+
+		$menuItemsMenu.forEach(($menuItem) => {
+			$menuItem.onclick = () => {
+				if (window.innerWidth < 768) {
+					$menu.classList.toggle("show");
+					$menuHamburguer.classList.toggle("close");
+				}
+			};
+		});
 	};
 </script>
