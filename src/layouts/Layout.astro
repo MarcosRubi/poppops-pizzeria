@@ -12,8 +12,19 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="PopPop's Pizzeria - Oven Baked Pizza, Italian Cuisine, Tasty Treats">
+		<meta property="og:description" content="Enjoy delicious oven-baked pizza, traditional Italian cuisine, and tasty treats at PopPop's Pizzeria. Dine in our relaxed and friendly atmosphere or order takeout or delivery through Grubhub, UberEats, Slice, or DoorDash. We also offer catering options for parties and events.">
+		<meta property="og:image" content="/images/pizza-image.webp">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<meta property="og:url" content="https://poppopspizzeria.com/">
+		<meta property="og:site_name" content="PopPop's Pizzeria">
+		<meta name="description" content="PopPop's Pizzeria offers a variety of oven-baked pizzas, traditional Italian cuisine, and tasty treats like cannolis and gelatos. Enjoy our dine-in experience in a relaxed and friendly dining room, or opt for takeout or delivery through Grubhub, UberEats, Slice, or DoorDash. We also provide catering options for parties and events.">
+		<meta name="keywords" content="PopPop's Pizzeria, Oven Baked Pizza, Italian Cuisine, Tasty Treats, Dine In, Take out, Catering">
+		<meta name="author" content="PopPop's Pizzeria">
+
 		<title>{title}</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,10 +42,7 @@ const { title } = Astro.props;
 	<body class="relative">
 		<slot />
 		<script src="/js/lightbox-plus-jquery.min.js" is:inline></script>
-		<script
-			src="https://code.jquery.com/jquery-3.7.0.min.js"
-			integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
-			crossorigin="anonymous"></script>
+		<script src="/js/code.jquery.com_jquery-3.7.0.min.js" is:inline></script>
 		<script src="/js/owl.carousel.min.js" is:inline></script>
 		<script src="/js/scripts.js" is:inline></script>
 		<script>
@@ -335,7 +343,7 @@ const { title } = Astro.props;
 	}
 
 	header .container.visible {
-		animation: down 0.6s linear, visible .6s linear;
+		animation: down 0.6s linear, visible 0.6s linear;
 		opacity: 1;
 	}
 	.hero {
@@ -365,127 +373,127 @@ const { title } = Astro.props;
 		&__header {
 			opacity: 0;
 			&.visible {
-				animation: toRight .6s ease-in-out , visible .5s linear;
+				animation: toRight 0.6s ease-in-out, visible 0.5s linear;
 				opacity: 1;
 			}
 		}
 		&__list div {
 			opacity: 0;
 			&:first-child.visible {
-				animation: fadeIn 0.6s ease-in-out, visible .3s linear;
+				animation: fadeIn 0.6s ease-in-out, visible 0.3s linear;
 				opacity: 1;
 			}
 			&:nth-child(2).visible {
-				animation: fadeIn 0.6s ease-in-out, visible .6s linear;
+				animation: fadeIn 0.6s ease-in-out, visible 0.6s linear;
 				opacity: 1;
 			}
 			&:last-child.visible {
-				animation: fadeIn 0.6s ease-in-out, visible .9s linear;
+				animation: fadeIn 0.6s ease-in-out, visible 0.9s linear;
 				opacity: 1;
 			}
 		}
 	}
-	.order-online{
-		h2{
+	.order-online {
+		h2 {
 			opacity: 0;
 			&.visible {
-				animation: toRight .6s ease-in-out , visible .5s linear;
+				animation: toRight 0.6s ease-in-out, visible 0.5s linear;
 				opacity: 1;
 			}
 		}
-		img{
+		img {
 			opacity: 0;
 			&.visible {
-				animation: toLeft .6s ease-in-out , visible .5s linear;
+				animation: toLeft 0.6s ease-in-out, visible 0.5s linear;
 				opacity: 1;
 			}
 		}
 	}
-	.gallery{
-		h2{
+	.gallery {
+		h2 {
 			opacity: 0;
 			&.visible {
-				animation: toRight .6s ease-in-out , visible .5s linear;
+				animation: toRight 0.6s ease-in-out, visible 0.5s linear;
 				opacity: 1;
 			}
 		}
-		img{
+		img {
 			opacity: 0;
 			&:first-child.visible {
-				animation: fadeIn .6s ease-in-out , visible .5s linear;
+				animation: fadeIn 0.6s ease-in-out, visible 0.5s linear;
 				opacity: 1;
 			}
 		}
 	}
-	.products{
-		h2{
+	.products {
+		h2 {
 			opacity: 0;
 			&.visible {
-				animation: toRight .6s ease-in-out , visible .5s linear;
+				animation: toRight 0.6s ease-in-out, visible 0.5s linear;
 				opacity: 1;
 			}
 		}
-		&__item{
+		&__item {
 			opacity: 0;
 			&.visible {
-				animation: fadeIn .75s ease-in-out , visible .75s linear;
-				opacity: 1;
-			}
-		}
-	}
-	.about-us{
-		h2{
-			opacity: 0;
-			&.visible {
-				animation: toRight .6s ease-in-out , visible .5s linear;
-				opacity: 1;
-			}
-		}
-		p{
-			opacity: 0;
-			&.visible {
-				animation: toRight .6s .3s ease-in-out , visible 1s linear;
-				opacity: 1;
-			}
-		}
-		img{
-			opacity: 0;
-			&.visible {
-				animation: fadeIn .6s ease-in-out , visible .5s linear;
+				animation: fadeIn 0.75s ease-in-out, visible 0.75s linear;
 				opacity: 1;
 			}
 		}
 	}
-	footer{
-		.address{
+	.about-us {
+		h2 {
 			opacity: 0;
 			&.visible {
-				animation: fadeIn .3s ease-in-out , visible .3s linear;
+				animation: toRight 0.6s ease-in-out, visible 0.5s linear;
 				opacity: 1;
 			}
 		}
-		.book-a-table{
+		p {
 			opacity: 0;
 			&.visible {
-				animation: fadeIn .6s ease-in-out , visible .6s linear;
+				animation: toRight 0.6s 0.3s ease-in-out, visible 1s linear;
 				opacity: 1;
 			}
 		}
-		.opening-hours{
+		img {
 			opacity: 0;
 			&.visible {
-				animation: fadeIn .9s ease-in-out , visible .9s linear;
+				animation: fadeIn 0.6s ease-in-out, visible 0.5s linear;
 				opacity: 1;
 			}
 		}
-		.social-feed{
+	}
+	footer {
+		.address {
 			opacity: 0;
 			&.visible {
-				animation: fadeIn 1.2s ease-in-out , visible 1.2s linear;
+				animation: fadeIn 0.3s ease-in-out, visible 0.3s linear;
 				opacity: 1;
 			}
 		}
-		.copy{
+		.book-a-table {
+			opacity: 0;
+			&.visible {
+				animation: fadeIn 0.6s ease-in-out, visible 0.6s linear;
+				opacity: 1;
+			}
+		}
+		.opening-hours {
+			opacity: 0;
+			&.visible {
+				animation: fadeIn 0.9s ease-in-out, visible 0.9s linear;
+				opacity: 1;
+			}
+		}
+		.social-feed {
+			opacity: 0;
+			&.visible {
+				animation: fadeIn 1.2s ease-in-out, visible 1.2s linear;
+				opacity: 1;
+			}
+		}
+		.copy {
 			opacity: 0;
 			&.visible {
 				animation: visible 1.5s linear;
